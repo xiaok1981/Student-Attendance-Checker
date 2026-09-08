@@ -1,0 +1,17 @@
+{
+  "name": "student-attendance-checker",
+  "version": "1.0.0",
+  "description": "Student Attendance Checker application with CI/CD",
+  "main": "script.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "attendance",
+    "student",
+    "checker",
+    "ci-cd"
+  ],
+  "author": "",
+  "license": "ISC"
+}

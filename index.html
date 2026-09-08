@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Attendance Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="card-header">
+            <div class="icon-badge">📊</div>
+            <h1>Student Attendance Checker</h1>
+            <p class="subtitle">Calculate attendance percentage and verify examination eligibility (Min. 75%)</p>
+        </header>
+
+        <form id="attendanceForm" onsubmit="event.preventDefault(); checkAttendance();">
+            <div class="form-group">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName" placeholder="e.g. Rahul" autocomplete="name">
+            </div>
+
+            <div class="form-group">
+                <label for="totalClasses">Total Classes</label>
+                <input type="number" id="totalClasses" placeholder="e.g. 40" min="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="attendedClasses">Classes Attended</label>
+                <input type="number" id="attendedClasses" placeholder="e.g. 36" min="0" required>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-primary" id="calculateBtn">Calculate Attendance</button>
+                <button type="button" class="btn btn-secondary" onclick="resetForm()" id="resetBtn">Reset</button>
+            </div>
+        </form>
+
+        <div id="result" class="result-box hidden"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
